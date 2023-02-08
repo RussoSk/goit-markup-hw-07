@@ -113,9 +113,40 @@ img {
 
 /* ======================== /Components ========================*/
 
+/* ======================== PECULARITIES ======================== */
+
+/* .list-peculiarities {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.peculiarities-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.box-icon {
+  display: flex;
+  width: 264px;
+  height: 112px;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4fd;
+
+  margin-bottom: 8px;
+}
+.item-pecularities-tumb {
+  max-width: 264px;
+} */
+/* ======================== /PECULARITIES ======================== */
+
 /* ================= mobile ====================*/
 
 @media screen and (max-width: 479px), (min-width: 480px) {
+
+  .box-icon {
+    display: none;
+  }
   .container {
     max-width: 396px;
     margin-right: auto;
@@ -128,6 +159,61 @@ img {
     justify-content: space-between;
     padding-top: 24px;
     padding-bottom: 24px;
+  }
+  .menu-link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--title-color);
+    transition: color var(--transform-time-cubic);
+  }
+  .menu-link:hover,
+  .menu-link:focus {
+    color: var(--base-color);
+  }
+  .adress {
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--base-color);
+    transition: color var(--transform-time-cubic);
+  }
+  .adress:hover,
+  .adress:focus {
+    color: var(--primary-color);
+  }
+  .item-address {
+    margin-right: 40px;
+  }
+  .menu-item {
+    position: relative;
+  }
+  .active-page::after {
+    content: "";
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--active-primari-color);
+  }
+  .active-page {
+    color: var(--active-primari-color);
+  }
+
+  /* pecularities */
+ 
+  .peculiarities-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .item-pecularities-tumb {
+    max-width: 100%;
   }
   /* personal */
   .personal {
@@ -152,7 +238,7 @@ img {
     display: none;
   }
   .container {
-    max-width: 720px;
+    max-width: 736px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -184,13 +270,26 @@ img {
     column-gap: 24px;
     justify-content: center;
     row-gap: 54px;
-    /* width: calc (100%/2-24px); */
+    
   }
   .item-personal {
-    max-width: 264px;
+    max-width: 356px;
   }
 }
-
+/* pecularities */
+.list-peculiarities {
+  display: flex;
+  column-gap: 24px;
+  row-gap: 72px;
+  flex-wrap: wrap;
+}
+.item-peculiarities {
+flex-basis: calc((100%-24px)/2);
+} 
+.section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
 /* ================= desctop ====================*/
 
 @media screen and (min-width: 1200px) {
@@ -218,6 +317,23 @@ img {
     display: flex;
     flex-wrap: wrap;
   }
+  /* pecularities */
+
+  .item-pecularities-tumb {
+    max-width: 264px;
+  }
+
+  .box-icon {
+  display: flex;
+  width: 264px;
+  height: 112px;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4fd;
+
+  margin-bottom: 8px;;
+  
+}
   /* personal */
   .list-personal {
     display: flex;
@@ -225,7 +341,7 @@ img {
     flex-wrap: wrap;
     gap: 24px;
   }
- 
+ /*  0 - 767px */
 }
 @media screen and (max-width: 767px) {
 
@@ -235,9 +351,15 @@ img {
   .list-address-container {
   display: none;
   }
+  
 }
-
-
+/* 1199 - +++ */
+@media screen and (max-width: 1199px) {
+  .opportunity {
+    display: none;
+  }
+  
+}
 .btn-burger {
   line-height: 0;
   background-color: transparent;
@@ -365,50 +487,7 @@ color: var(--base-color);
   margin-right: 40px;
 } */
 
-.menu-link {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--title-color);
-  transition: color var(--transform-time-cubic);
-}
-.menu-link:hover,
-.menu-link:focus {
-  color: var(--base-color);
-}
-.adress {
-  font-style: normal;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--base-color);
-  transition: color var(--transform-time-cubic);
-}
-.adress:hover,
-.adress:focus {
-  color: var(--primary-color);
-}
-.item-address {
-  margin-right: 40px;
-}
-.menu-item {
-  position: relative;
-}
-.active-page::after {
-  content: "";
-  position: absolute;
-  bottom: -100%;
-  left: 0;
-  display: inline-block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background: var(--active-primari-color);
-}
-.active-page {
-  color: var(--active-primari-color);
-}
+
 /*  ======================== /HEADER ======================== */
 
 /* ======================== HERO ======================== */
@@ -461,32 +540,7 @@ color: var(--base-color);
 
 /* ======================== /hero ======================== */
 
-/* ======================== PECULARITIES ======================== */
 
-.list-peculiarities {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-.peculiarities-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.box-icon {
-  display: flex;
-  width: 264px;
-  height: 112px;
-  align-items: center;
-  justify-content: center;
-  background-color: #f4f4fd;
-
-  margin-bottom: 8px;
-}
-.item-pecularities-tumb {
-  max-width: 264px;
-}
-/* ======================== /PECULARITIES ======================== */
 
 /* ======================== OPPORTUNITY======================== */
 .opportunity {
