@@ -47,13 +47,89 @@ img {
  
 }
 
-@media screen and (min-width: 480px) {
+/* ======================== Components ========================*/
+
+.main-logo {
+  font-family: var(--secondary-font);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  color: var(--primary-color);
+  text-transform: uppercase;
+
+  margin-right: 76px;
+}
+.sup-logo {
+  color: var(--title-color);
+}
+.title-section {
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  margin-bottom: 72px;
+}
+.sup-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--title-color);
+}
+
+.base-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--base-color);
+
+  margin-top: 8px;
+}
+.button {
+  font-family: var(--primary-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  text-align: center;
+}
+.footer {
+  background-color: var(--title-color);
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* ======================== /Components ========================*/
+
+/* ================= mobile ====================*/
+
+@media screen and (max-width: 479px), (min-width: 480px) {
   .container {
     max-width: 396px;
     margin-right: auto;
     margin-left: auto;
   }
- 
+  /* header */
+  .main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  /* personal */
   .personal {
     padding-top: 96px;
     padding-bottom: 128px;
@@ -61,6 +137,7 @@ img {
   .list-personal {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     row-gap: 72px;
   }
@@ -68,36 +145,87 @@ img {
     max-width: 260px;
   }
 }
+/* ================= Tablet ====================*/
+
 @media screen and (min-width: 768px) {
+  .btn-burger {
+    display: none;
+  }
   .container {
     max-width: 720px;
     margin-right: auto;
     margin-left: auto;
   }
-  .btn-burger {
-    display: none;
+  /* header */
+  .main-header {
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+  .top-line-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: space-between;
+  }
+  .list-item-container {
+    display: flex;
+    text-align: center;
+  }
+  .menu-item:not(:last-child) {
+    margin-right: 40px;
+  } 
+
+  /* section personal */
+  .personal {
+    padding-bottom: 104px;
+  }
+  .list-personal {
+    flex-direction: row;
+    column-gap: 24px;
+    justify-content: center;
+    row-gap: 54px;
+    /* width: calc (100%/2-24px); */
+  }
+  .item-personal {
+    max-width: 264px;
   }
 }
+
+/* ================= desctop ====================*/
+
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1158px;
     margin-right: auto;
     margin-left: auto;
   }
-
   .section {
     padding-top: 120px;
     padding-bottom: 120px;
   }
+  /* header */
+  .header {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--accent-color);
+  }
+  .main-header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+ 
+  }
+  .list-address-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  /* personal */
   .list-personal {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 24px;
   }
-  .item-personal {
-    max-width: 264px;
-  }
+ 
 }
 @media screen and (max-width: 767px) {
 
@@ -109,13 +237,7 @@ img {
   }
 }
 
-.main-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
+
 .btn-burger {
   line-height: 0;
   background-color: transparent;
@@ -210,76 +332,6 @@ color: var(--base-color);
 }
 
 
-
-
-
-/* ======================== Components ========================*/
-
-.main-logo {
-  font-family: var(--secondary-font);
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.3;
-  letter-spacing: 0.03em;
-  color: var(--primary-color);
-  text-transform: uppercase;
-
-  margin-right: 76px;
-}
-.sup-logo {
-  color: var(--title-color);
-}
-.title-section {
-  font-size: 36px;
-  line-height: 1.1;
-  letter-spacing: 0.02em;
-  margin-bottom: 72px;
-}
-.sup-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: var(--title-color);
-}
-
-.base-text {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--base-color);
-
-  margin-top: 8px;
-}
-.button {
-  font-family: var(--primary-font);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  cursor: pointer;
-  text-align: center;
-}
-.footer {
-  background-color: var(--title-color);
-}
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-
-
-/* ======================== /Components ========================*/
 
 /* ======================== HEADER ========================*/
 /* .header {
