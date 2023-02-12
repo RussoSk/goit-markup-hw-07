@@ -844,7 +844,11 @@ img {
 
 /* =========================================== R-U-L-E-S====================================== */
 /*  0 - 767px */
-
+@media screen and (max-width: 465px) {
+  .mb-menu-tell {
+    font-size: 21px;
+  }
+}
 @media screen and (max-width: 767px) {
   .list-item-container {
     display: none;
@@ -852,6 +856,7 @@ img {
   .list-address-container {
     display: none;
   }
+  
 }
 /* 1199 - +++ */
 @media screen and (max-width: 1199px) {
