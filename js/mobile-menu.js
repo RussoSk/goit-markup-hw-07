@@ -5,7 +5,7 @@
       closeMenuBtn: document.querySelector('[data-menu-close]'),
       menu: document.querySelector('[data-menu]'),
         body: document.querySelector('body'),
-        memuList:document.querySelector('.nav-mobile-menu'),
+        memuList:document.querySelector('.mb-menu-list'),
     };
   
     refs.openMenuBtn.addEventListener('click', toggleModal);
