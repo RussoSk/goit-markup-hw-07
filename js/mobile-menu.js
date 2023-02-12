@@ -13,11 +13,11 @@
     refs.memuList.addEventListener('click', removeMenu);
   
     function toggleModal() {
-      refs.menu.classList.toggle('is-open');
+      refs.menu.classList.toggle('is-hidden');
       refs.body.classList.toggle('no-scroll');
     }
     function removeMenu() {
-      refs.menu.classList.add('is-open');
+      refs.menu.classList.add('is-hidden');
       refs.body.classList.remove('no-scroll');
     }
   })();
