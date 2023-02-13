@@ -1193,5 +1193,6 @@ img {
   }
   .item-projekt {
     flex-basis: calc((100% - 24px) / 3);
+    
   }
 }
