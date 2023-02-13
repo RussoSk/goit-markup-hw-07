@@ -10,10 +10,7 @@
   --color-icon-social: #f4f4fd;
   --color-icon-customers: #8e8f99;
   --transform-time-cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  --line-gradient: (
-    rgba(46, 47, 66, 0.7),
-    rgba(46, 47, 66, 0.7)
-  );
+  --line-gradient: (rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
 }
 h1,
 h2,
@@ -294,9 +291,10 @@ img {
   (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ), url(../css/style/hero-image/hero-image-mob-2x.jpg);
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../css/style/hero-image/hero-image-mob-2x.jpg);
   }
 }
 .main-button {
@@ -529,7 +527,6 @@ img {
   line-height: 2;
   letter-spacing: 0.04em;
   color: rgba(255, 255, 255, 0.6);
-
 }
 
 .modal-form-input:not(:focus):not(:placeholder-shown):valid {
@@ -564,16 +561,22 @@ img {
 
 /* ======================== PORTFOLIO ======================== */
 .portfolio {
-  padding-top: 96px;
-  padding-bottom: 120px;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 .list-navigation {
   display: flex;
-  justify-content: center;
+  row-gap: 16px;
   column-gap: 24px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
 }
-.list-navigation {
-  margin-bottom: 72px;
+.sup-title-portfolio {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: var(--title-color);
 }
 .card-portfolio {
   transition: box-shadow var(--transform-time-cubic);
@@ -602,13 +605,9 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-left: calc(-1 * var(--card-set-gap));
-  margin-top: calc(-1 * var(--card-set-gap));
 }
 .item-projekt {
-  margin-left: var(--card-set-gap);
-  margin-top: var(--card-set-gap);
-  flex-basis: calc(100% / 3-var(--card-set-gap));
+  max-width: 396px;
 }
 
 .card-content {
@@ -1064,6 +1063,23 @@ img {
     display: inline-block;
     margin-top: 72px;
   }
+  /* portfolio */
+  .portfolio {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+  .list-navigation {
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 64px;
+  }
+  .list-projekt {
+    gap: 24px;
+    justify-content: flex-start;
+  }
+  .item-projekt {
+    flex-basis: calc((100% - 24px) / 2);
+  }
 }
 /* ================= DESKTOP ====================*/
 
@@ -1162,5 +1178,20 @@ img {
   }
   .footer-subscribe {
     margin-top: 0;
+  }
+  /* portfolio */
+  .portfolio {
+    padding-top: 96px;
+    padding-bottom: 120px;
+  }
+  .list-navigation {
+    column-gap: 24px;
+    margin-bottom: 72px;
+  }
+  .list-projekt {
+    justify-content: center;
+  }
+  .item-projekt {
+    flex-basis: calc((100% - 24px) / 3);
   }
 }
