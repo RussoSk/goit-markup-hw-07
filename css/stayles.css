@@ -867,6 +867,7 @@ img {
 
 /* ====================/form ====================  */
 
+
 /* =========================================== R-U-L-E-S====================================== */
 /*  0 - 767px */
 @media screen and (max-width: 465px) {
@@ -1193,7 +1194,7 @@ img {
     justify-content: center;
   }
   .item-projekt {
-    flex-basis: calc((100% - 24px) / 3);
+    flex-basis: calc((100% - 48px) / 3);
     
   }
 }
