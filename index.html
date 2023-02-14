@@ -250,28 +250,78 @@
           <h2 class="title-section">What are we doing</h2>
           <ul class="list-opportunity">
             <li class="item-opportunity">
-              <img
-                src="./images/main/comp.jpg"
-                alt="monitor PC"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main/comp.jpg    1x,
+                    ./images/main/comp-2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <source
+                  srcset="
+                    ./images/main/comp-1x.webp 1x,
+                    ./images/main/comp-2x.webp 2x
+                  "
+                  type="image/webp "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  src="./images/main/comp.jpg"
+                  alt="monitor PC"
+                  width="360"
+                  height="300"
+                />
+              </picture>
             </li>
             <li class="item-opportunity">
-              <img
-                src="./images/main/tel.jpg"
-                alt="mobile phone display and appllications"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <source
+                  srcset="./images/main/tel.jpg 1x, 
+                  ./images/main/tel-2x.jpg 2x"
+                  media="(min-width: 480px)"
+                />
+                <source
+                  srcset="
+                    ./images/main/tel-1x.webp 1x,
+                    ./images/main/tel-2x.webp 2x
+                  "
+                  type="image/webp "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  src="./images/main/tel.jpg"
+                  alt="mobile phone display and appllications"
+                  width="360"
+                  height="300"
+                />
+              </picture>
             </li>
             <li class="item-opportunity">
-              <img
-                src="./images/main/desktop.jpg"
-                alt="foto laptop and mobile phone"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main/desktop.jpg    1x,
+                    ./images/main/desktop-2x.jpg 2x
+                  "
+                  type="image/jpeg "
+                  media="(min-width: 480px)"
+                />
+                <source
+                  srcset="
+                    ./images/main/desktop-1x.webp 1x,
+                    ./images/main/desktop-2x.webp 2x
+                  "
+                  type="image/webp "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  src="./images/main/desktop.jpg"
+                  alt="foto laptop and mobile phone"
+                  width="360"
+                  height="300"
+                />
+              </picture>
             </li>
           </ul>
         </div>
