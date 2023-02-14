@@ -41,6 +41,7 @@ a {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 .container {
   /* width: 100%; */
@@ -606,6 +607,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  row-gap: 48px;
 }
 .item-projekt {
   max-width: 396px;
@@ -868,12 +870,19 @@ img {
 /* ====================/form ====================  */
 
 
-/* =========================================== R-U-L-E-S====================================== */
+/* =========================================== M E D I A ====================================== */
 /*  0 - 767px */
 @media screen and (max-width: 465px) {
   .mb-menu-tell {
     font-size: 21px;
   }
+}
+@media screen and (max-width: 479px) {
+  .container {
+    max-width: 396px;
+    margin-right: auto;
+    margin-left: auto;
+  } 
 }
 @media screen and (max-width: 767px) {
   .list-item-container {
@@ -964,6 +973,8 @@ img {
   .footer-email {
     gap: 24px;
   }
+  /* portfolio */
+
 }
 
 /* ================= TABLET ====================*/
