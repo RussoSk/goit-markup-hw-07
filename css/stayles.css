@@ -462,7 +462,6 @@ img {
 }
 
 .footer-list {
-  
   padding-top: 96px;
   padding-bottom: 96px;
 }
@@ -963,8 +962,7 @@ img {
       background-image: url(../css/style/hero-image/hero-image-tab-2x.jpg);
     }
   }
- 
- 
+
   /* portfolio */
 }
 
@@ -1091,7 +1089,6 @@ img {
   }
   .footer-social-media {
     align-items: start;
-   
   }
   /* portfolio */
   .portfolio {
@@ -1208,6 +1205,7 @@ img {
   .customers {
     padding-top: 120px;
     padding-bottom: 120px;
+  }
   /* footer */
 
   .footer-title {
