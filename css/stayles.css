@@ -417,8 +417,8 @@ img {
 /* ======================== CUSTOMERS======================== */
 .customers {
   text-align: center;
-  padding-top: 130px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .list-customers {
@@ -963,7 +963,7 @@ img {
       background-image: url(../css/style/hero-image/hero-image-tab-2x.jpg);
     }
   }
-  /* footer */
+ 
  
   /* portfolio */
 }
@@ -1205,6 +1205,9 @@ img {
     flex-wrap: wrap;
     gap: 24px;
   }
+  .customers {
+    padding-top: 120px;
+    padding-bottom: 120px;
   /* footer */
 
   .footer-title {
