@@ -199,8 +199,8 @@ img {
 
 .btn-close-mob-menu {
   position: absolute;
-  top: 40px;
-  right: 40px;
+  top: 24px;
+  right: 24px;
   line-height: 0;
   background-color: #e7e9fc;
   border: none;
