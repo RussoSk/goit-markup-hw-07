@@ -801,13 +801,13 @@
         <p class="modal-text">Leave your contacts and we will call you back</p>
 
         <!-- Form -->
-        <form class="modal-form" name="form-modal-window">
+        <form class="modal-form" name="form-modal-window" id="tg">
           <label class="modal-form-field">
             <span class="modal-form-span">Name*</span>
             <span class="modal-form-decor-icon">
               <input
                 type="text"
-                name="user-name"
+                name="name"
                 class="modal-form-input"
                 required
                 pattern="^[a-zA-Zа-яА-ЯіІїЇ]+$"
@@ -826,7 +826,7 @@
             <span class="modal-form-decor-icon">
               <input
                 type="tel"
-                name="user-phone"
+                name="phone"
                 class="modal-form-input"
                 required
                 pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}"
@@ -844,6 +844,7 @@
             <span class="modal-form-decor-icon">
               <input
                 type="email"
+                name="email"
                 class="modal-form-input"
                 placeholder="name@gmail.com"
               />
@@ -886,5 +887,8 @@
 
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
+
+    <script src="./js/bot.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </body>
 </html>
